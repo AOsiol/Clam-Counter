@@ -20,7 +20,8 @@ app.use(express.static("public"));
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-    "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
+    // "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
+    "mongodb://budget:budget1@ds253408.mlab.com:53408/heroku_5j8zjng2",
   {
     useNewUrlParser: true,
   }
