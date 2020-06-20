@@ -23,7 +23,6 @@ mongoose.connect(
     "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
   {
     useNewUrlParser: true,
-    useFindAndModify: false,
   }
 );
 
