@@ -18,7 +18,7 @@ app.use(express.static("public"));
 // this is hosted on heroku right now and should be directed there?
 // issues with installing mongoose  Also, how to tell if everything installed correctly?
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false,
 });
