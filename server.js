@@ -3,8 +3,8 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
-const PORT = 3000;
-
+// const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(logger("dev"));
@@ -24,7 +24,7 @@ app.use(express.static("public"));
 // issues with installing mongoose  Also, how to tell if everything installed correctly?
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongod://localhost/clams",
+  process.env.MONGODB_URI || "mongodb://localhost/clams",
   // "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
   {
     useNewUrlParser: true,
