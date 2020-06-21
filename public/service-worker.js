@@ -1,5 +1,14 @@
 console.log("Hello from your service worker!");
-const FILES_TO_CACHE = ["/index.html"];
+const FILES_TO_CACHE = [
+  "/",
+  "/db.js",
+  "/index.html",
+  "/index.js",
+  "/styles.css",
+  "/manifest.webmanifest",
+  "/icons/icon-192x192.png",
+  "/icons/icon-512x512.png",
+];
 
 const PRECACHE = "precache-v1";
 const RUNTIME = "runtime";

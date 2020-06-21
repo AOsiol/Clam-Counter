@@ -15,15 +15,20 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+// mongoose.connect("mongodb://localhost/budget", {
+//   useNewUrlParser: true,
+//   useFindAndModify: false,
+// });
+
 // this is hosted on heroku right now and should be directed there?
 // issues with installing mongoose  Also, how to tell if everything installed correctly?
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-    // "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
-    "mongodb://budget:budget1@ds253408.mlab.com:53408/heroku_5j8zjng2",
+    "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
   {
     useNewUrlParser: true,
+    useFindAndModify: false,
   }
 );
 
