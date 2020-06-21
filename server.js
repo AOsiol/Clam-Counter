@@ -24,8 +24,8 @@ app.use(express.static("public"));
 // issues with installing mongoose  Also, how to tell if everything installed correctly?
 
 mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
+  process.env.MONGODB_URI || "mongod://localhost/clams",
+  // "mongodb://clams:5clams@ds253408.mlab.com:53408/heroku_5j8zjng2",
   {
     useNewUrlParser: true,
     useFindAndModify: false,
